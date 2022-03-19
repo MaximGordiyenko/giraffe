@@ -1,17 +1,17 @@
 import { useMemo } from "react";
 import { useTable } from 'react-table';
 
-export const Users = ({ users }) => {
+export const Products = ({ products }) => {
   
-  const skillsData = users?.map(el => el.skills?.map(el => {
-    console.log(el);
+  const productsData = products?.map(el => {
     return {
       col1: el.id,
-      col2: el.skill,
+      col2: el.title,
+      col3: el.price,
+      col4: el.count,
     };
-  }));
-  
-  const data = useMemo(() => skillsData.flat(), []);
+  });
+  const data = useMemo(() => productsData.flat(), []);
   
   const columns = useMemo(
     () => [
@@ -20,8 +20,16 @@ export const Users = ({ users }) => {
         accessor: 'col1',
       },
       {
-        Header: 'skills',
+        Header: 'title',
         accessor: 'col2',
+      },
+      {
+        Header: 'price',
+        accessor: 'col3',
+      },
+      {
+        Header: 'count',
+        accessor: 'col4',
       },
     ],
     []
