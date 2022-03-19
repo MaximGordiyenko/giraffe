@@ -1,0 +1,14 @@
+[
+  {
+    "id": 1,
+    "title": "Good tea",
+    "price": 10,
+    "count": 13
+  },
+  {
+    "id": 1,
+    "title": "Good coffee",
+    "price": 15,
+    "count": 31
+  }
+]
